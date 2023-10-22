@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "test",
+  "source": [
+    "assets/src/index.html",
+    "assets/src/scripts/main.js",
+    "assets/src/styles/main.scss",
+    "assets/src/fonts/fonts.scss"
+  ],
+  "scripts": {
+    "watch": "parcel --dist-dir ./assets/dist --open false --port 3000",
+    "build": "parcel --dist-dir ./assets/dist" 
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "latest",
+    "bootstrap": "^5.3.2",
+    "parcel": "latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

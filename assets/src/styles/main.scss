@@ -1,0 +1,325 @@
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1920px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1160px,
+        xxl: 1918px
+);
+
+// @import "~bootstrap/scss/bootstrap-grid";
+@import "/assets/src/fonts/fonts.scss";
+
+
+$RobotoBold: Roboto-Bold;
+$RobotoRegular: Roboto-Regular;
+$lightGray: #f8fafb;
+$colorText: #8f9bb3;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00A1FF;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6{
+    color: #252E37;
+    margin: 0;
+    padding: 0;
+}
+p, span{
+    font-family: $RobotoRegular;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.hero{
+    background: $lightGray;
+    padding: 116px 0 255px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: end;
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+            h1{
+                font-family: $RobotoBold;
+                font-size: 56px;
+                margin: 15px 0;
+                line-height: 56px;
+                max-width: 516px;
+            }
+            span{
+                padding: 8px 16px;
+                border-radius: 53px;
+                background: #fff;
+                width: max-content;
+                font-size: 13px;
+                line-height: 20px;
+                color: $colorText;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                color: $colorText;
+                max-width: 590px;
+            }
+            a{
+                display: inline-block;
+                padding: 8px 16px;
+                margin-top: 15px;
+                font-family: $RobotoBold;
+                color: #fff;
+                border-radius: 6px;
+                background: #00A1FF;
+                width: max-content;
+                text-decoration: none;
+                transition: background 0.3s ease-in-out;
+                &:hover{
+                    background: #46ace7;
+                }
+            }
+        }
+        &-img{
+            img{
+                max-width: 100%;
+            }
+        }
+    } 
+}   
+    
+
+.cards{
+    margin-top: -115px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+    &__item{
+        text-align: center;
+        padding: 20px 10px 50px;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        h3{
+            font-family: $RobotoBold;
+            color: #283540;
+            font-size: 22px;
+            line-height: 32px;
+            margin: 20px auto 15px;
+            max-width: 180px;
+        }
+        p{
+            font-family: $RobotoRegular;
+            color: $colorText;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.advantages{
+    padding: 120px 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 85px;
+    h2{
+        color: #1F262E;
+        text-align: center;
+        font-family: $RobotoBold;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 56px; 
+        max-width: 500px;
+        justify-self: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        &-text{
+            max-width: 358px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3{
+                color: #1F262E;
+                font-family: $RobotoBold;
+                font-size: 32px;
+                line-height: 40px;
+            }
+            p{
+                color: $colorText;
+                font-family: $RobotoRegular;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 20px 0; 
+            }
+            a{
+                font-family: $RobotoBold;
+                display: inline-block;
+                background: #00A1FF;
+                border-radius: 6px;
+                padding: 8px 16px;
+                color: #fff;
+                width: max-content;
+                transition: background 0.3s ease-in-out;
+                &:hover{
+                    background: #46ace7;
+                }
+            }
+        }
+        &-img{
+            img{
+                max-width: 299px;
+                border-radius: 40px;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.footer{
+    font-family: $RobotoBold;
+    text-align: center;
+    max-height: 254px;
+    background: #00A1FF;
+    padding: 71px 0;
+    h2{
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 56px;
+        line-height: 56px;
+    }
+    a{
+        display: inline-block;
+        color: #00A1FF;
+        background: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background 0.3s ease-in-out;
+        &:hover{
+            background: #f0e8e8;
+        }
+    }
+}
+
+
+@media (max-width: 991.97px){ 
+    .hero{
+        overflow-x: hidden;
+        &__wrapper{
+            &-text{
+                padding: 0 10px;
+            }
+            &-img{
+                img{
+                    max-width: 140%;
+                }
+            }
+        }
+    }
+    .cards{
+        &__wrapper{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 767.97px){ 
+    .hero{
+        padding: 58px 10px;
+        &__wrapper{
+            grid-template-columns: 1fr;
+            justify-items: center;
+            &-text{
+                h1{
+                    font-size: 40px;
+                    line-height: 40px;
+                    max-width: 400px;
+                }
+                text-align: center;
+                align-items: center;
+                margin-bottom: 58px;
+            }
+        }
+    }
+    .cards{
+        margin: 0;
+        padding: 58px 0;
+        &__wrapper{
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        &__item{
+            padding: 50px 10px;
+            h3{
+                max-width: 100%;
+            }
+        }
+    }
+    .advantages{
+        gap: 40px;
+        max-width: 100%;
+        padding: 60px 0;
+        h2{
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &__wrapper{
+            flex-direction: column;
+            margin-bottom: 40px;
+            align-items: center;
+            &-text{
+                order: 1;
+                text-align: center;
+                align-items: center;
+                p{
+                    margin: 10px 0;
+                }
+            }
+            &-img{
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .footer{
+        h2{
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+}
